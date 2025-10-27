@@ -7,7 +7,7 @@ version = "0.2.0"
 preview = ["pixi-build"]
 
 [tasks]
-configure = "cmake -B build -S ."
+configure = "cmake -B build -S viewer"
 build = { cmd = "cmake --build build", depends-on = ["configure"] }
 install = { cmd = "cmake --install build", depends-on = ["build"] }
 clean = "rm -rf build"
