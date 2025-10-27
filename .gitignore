@@ -16,3 +16,6 @@
 
 doxygen
 *.pyc
+# pixi environments
+.pixi/*
+!.pixi/config.toml
