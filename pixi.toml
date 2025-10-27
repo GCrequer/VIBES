@@ -24,10 +24,18 @@ version = "0.2.0"
 backend = { name = "pixi-build-cmake", version = "0.3.*", channels = ["https://prefix.dev/pixi-build-backends", "conda-forge"] }
 
 [package.build.config]
-extra-args = ["-DCMAKE_BUILD_TYPE=Release"]
+extra-args = [
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DCMAKE_PREFIX_PATH=$CONDA_PREFIX/lib/cmake",
+    "-DQT_DEBUG_FIND_PACKAGE=ON"
+]
 
 [package.host-dependencies]
-qt6-main = "*"
+qt = "5.15.*"
+xorg-libx11 = "*"
+libxcb = "*"
+libxkbcommon = "*"
+fontconfig = "*"
 mesalib = "*"
 cmake = "*"
 git = "*"
