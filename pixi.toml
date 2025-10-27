@@ -28,9 +28,9 @@ extra-args = ["-DCMAKE_BUILD_TYPE=Release"]
 
 [package.host-dependencies]
 qt6-main = "*"
-mesalib = ">*"
+mesalib = "*"
 cmake = "*"
-git = ">=*"
+git = "*"
 cxx-compiler = "*"
 
 [package.build-dependencies]
