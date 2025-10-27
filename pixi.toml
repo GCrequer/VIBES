@@ -3,7 +3,7 @@ authors = ["Gwendal Crequer <gwendal.crequer@laas.fr>"]
 channels = ["conda-forge"]
 name = "VIBES"
 platforms = ["linux-64"]
-version = "0.1.0"
+version = "0.2.0"
 preview = ["pixi-build"]
 
 [tasks]
@@ -21,12 +21,10 @@ version = "0.2.0"
 
 
 [package.build]
-backend = { name = "pixi-build-cmake", version = "0.3.*" }
-channels = ["https://prefix.dev/pixi-build-backends"]
+backend = { name = "pixi-build-cmake", version = "0.3.*", channels = ["https://prefix.dev/pixi-build-backends", "conda-forge"] }
 
 [package.build.config]
 extra-args = ["-DCMAKE_BUILD_TYPE=Release"]
-
 
 [package.host-dependencies]
 qt6-main = ">=6.9.3,<7"
