@@ -27,11 +27,11 @@ backend = { name = "pixi-build-cmake", version = "0.3.*", channels = ["https://p
 extra-args = ["-DCMAKE_BUILD_TYPE=Release"]
 
 [package.host-dependencies]
-qt6-main = ">=6.9.3,<7"
-mesalib = ">=25.0.5,<26"
-cmake = ">=4.1.2,<5"
-git = ">=2.51.1,<3"
-cxx-compiler = ">=1.11.0,<2"
+qt6-main = "*"
+mesalib = ">*"
+cmake = "*"
+git = ">=*"
+cxx-compiler = "*"
 
 [package.build-dependencies]
 git = "*"
